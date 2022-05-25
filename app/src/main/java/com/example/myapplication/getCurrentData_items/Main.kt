@@ -1,4 +1,4 @@
-package com.example.myapplication.api_items
+package com.example.myapplication.getCurrentData_items
 
 data class Main(
     val feels_like: Double,

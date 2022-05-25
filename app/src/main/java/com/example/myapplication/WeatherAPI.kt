@@ -1,7 +1,7 @@
 package com.example.myapplication
 
 
-import com.example.myapplication.api_items.WeatherJSON
+import com.example.myapplication.getCurrentData_items.WeatherJSON
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

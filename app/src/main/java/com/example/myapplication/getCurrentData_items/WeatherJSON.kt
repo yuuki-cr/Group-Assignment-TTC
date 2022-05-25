@@ -1,4 +1,4 @@
-package com.example.myapplication.api_items
+package com.example.myapplication.getCurrentData_items
 
 data class WeatherJSON(
     val clouds: Clouds,
