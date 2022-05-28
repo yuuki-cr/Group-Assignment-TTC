@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/searchInput"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/searchbar_background"
+            android:hint="Search Country"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingStart="12dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.076"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/searchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="20dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="15dp"
+            android:text="Search"
+            app:layout_constraintStart_toEndOf="@+id/searchInput"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="132dp"
+            android:fontFamily="sans-serif-light"
+            android:paddingStart="30dp"
+            android:text="32°"
+            android:textColor="@color/black"
+            android:textSize="48sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tempPlaceHolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:paddingStart="30dp"
+            android:text="Temperature:"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/country" />
+
+        <TextView
+            android:id="@+id/feelsLikeTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/country"
+            android:layout_marginTop="48dp"
+            android:layout_toEndOf="@+id/temperatureRange"
+            android:paddingStart="30dp"
+            android:text="Feels like 38°"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/country" />
+
+        <TextView
+            android:id="@+id/temperatureRange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/country"
+            android:layout_marginTop="24dp"
+            android:paddingStart="5dp"
+            android:text="34°/21°"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/tempPlaceHolder"
+            app:layout_constraintTop_toBottomOf="@+id/country" />
+
+        <ImageView
+            android:layout_width="131dp"
+            android:layout_height="111dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="124dp"
+            android:layout_marginEnd="28dp"
+            android:contentDescription="Weather image"
+            android:src="@drawable/cloudy_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/temperature"
+            android:layout_alignParentStart="true"
+            android:paddingStart="30dp"
+            android:text="Country name"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/temperature" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
