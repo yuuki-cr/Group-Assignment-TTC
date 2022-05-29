@@ -117,23 +117,12 @@
             app:layout_constraintTop_toBottomOf="@+id/country" />
 
         <ImageView
-            android:layout_width="301dp"
-            android:layout_height="351dp"
+            android:id="@+id/weatherImage"
+            android:layout_width="243dp"
+            android:layout_height="231dp"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="364dp"
-            android:layout_marginEnd="36dp"
-            android:alpha="0.6"
-            android:contentDescription="@string/weather_imageblk"
-            android:src="@drawable/cloudy_imgblk"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:layout_width="301dp"
-            android:layout_height="351dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="344dp"
-            android:layout_marginEnd="52dp"
+            android:layout_marginTop="392dp"
+            android:layout_marginEnd="84dp"
             android:contentDescription="@string/weather_image"
             android:src="@drawable/cloudy_img"
             app:layout_constraintEnd_toEndOf="parent"

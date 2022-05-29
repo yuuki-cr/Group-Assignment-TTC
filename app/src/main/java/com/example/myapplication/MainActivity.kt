@@ -8,9 +8,11 @@ import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.getCurrentData_items.WeatherJSON
+import com.squareup.picasso.Picasso
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -56,6 +58,10 @@ class MainActivity : AppCompatActivity() {
                     val temperatureRange = findViewById<TextView>(R.id.temperatureRange)
                     val feelsLike = findViewById<TextView>(R.id.feelsLikeTemperature)
 
+                    Picasso.get()
+                        .load("https://openweathermap.org/img/wn/" + body.weather[0].icon + "@4x.png")
+                        .into(findViewById<ImageView>(R.id.weatherImage))
+
                     country.text = body.name
                     temperature.text = "%.0f".format(body.main.temp) + "°"
                     temperatureRange.text = "%.0f".format(body.main.temp_max) + "° / " + "%.0f".format(body.main.temp_min) + "°"
@@ -73,7 +79,6 @@ class MainActivity : AppCompatActivity() {
             }
         })
     }
-
 
     private fun Activity.hideKeyboard() {
         hideKeyboard(currentFocus ?: View(this))
